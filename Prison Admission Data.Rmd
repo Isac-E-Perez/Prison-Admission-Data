@@ -9,7 +9,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 # wanted to use mgcv but errors show up when using on macOS...will use the library for future projects with Windows.  
-library(mgcv)
+#library(mgcv)
 library(plotly)
  
 # load the datasets
