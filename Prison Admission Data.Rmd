@@ -108,6 +108,7 @@ viz <- ggplot(data=fiscal_year,aes(x=Total,y=Probation.Revocations)) +
   geom_point(color="navy")  
 viz
 
+# the use of Plotly
  
 p <- ggplot(fiscal_year, aes(Total, Direct.Court.Commitments))
 p <- p + geom_point() + stat_smooth()
