@@ -1,0 +1,154 @@
+---
+title: "Prison Admission Data"
+output: html_notebook
+---
+ 
+```{r}
+# load libraries
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(mgcv)
+library(plotly)
+ 
+# load the datasets
+division_allocation <- read.csv("Division Allocation.csv")
+fiscal_year <- read.csv("Fiscal Year.csv")
+residential_population <- read.csv("Residential Population.csv")
+returns <- read.csv("Returns.csv")
+
+# lets view our datasets
+head(division_allocation)
+head(fiscal_year)
+head(residential_population)
+head(returns)
+ 
+# find the mean of the residential population 
+residential_population_mean <- mean(residential_population$Population)
+residential_population_mean
+# find the standard deviation of the residential population
+residential_population_sd <- sd(residential_population$Population)
+residential_population_sd
+
+# number of days between release date and arrest date2
+dput(head(returns)) 
+days_between <- data.frame(Release.Date = c("7/3/2012", "7/24/2012", "4/3/2012", 
+"4/10/2012"), Arrest.Date.2 = c("10/31/2014", "12/20/2012", "4/21/2014", 
+"4/1/2015"))
+
+days_between$date_diff <-
+  as.Date(as.character(days_between$Arrest.Date.2), format="%m/%d/%Y") -as.Date(as.character(days_between$Release.Date), format="%m/%d/%Y")
+days_between 
+
+# I want to know in months
+days_between %>%
+  mutate(month=round(date_diff/30.417,digit=0)) %>%
+  mutate(month = gsub('\\days', 'months', month))
+
+# within the division_allocation dataset, allocate the division overhead among the various programs within the division
+
+# --- We want to divide the indirect costs by the direct labor costs
+
+overhead_rate_A <- division_allocation$Division.A/division_allocation$Program.A
+overhead_rate_A
+
+overhead_rate_B <- 
+  division_allocation$Division.A/division_allocation$Program.B
+overhead_rate_B
+
+overhead_rate_C <- division_allocation$Division.A/division_allocation$Program.C
+overhead_rate_C
+
+overhead_rate_D <- division_allocation$Division.A/division_allocation$Program.D
+overhead_rate_D
+
+# this is the overhead rate, meaning that it costs the company $ in overhead costs for every dollar in direct labor expenses.
+
+# percentage change in the number of offenders admitted to prison from fiscal year 2005 to fiscal year 2010
+fiscal_year %>% 
+  mutate(pct_change_direct = ((Direct.Court.Commitments/lag(Direct.Court.Commitments) - 1) * 100)) %>%
+  mutate(pct_change_parole = ((Parole.Revocations/lag(Parole.Revocations) - 1) * 100)) %>%
+  mutate(pct_change_probation = ((Probation.Revocations/lag(Probation.Revocations) - 1) * 100))
+ 
+# average number of offenders admitted to prison from fiscal year 2005 to fiscal year 2010
+mean_direct <- mean(fiscal_year$Direct.Court.Commitments) 
+mean_parole <- mean(fiscal_year$Parole.Revocations) 
+mean_probation <- mean(fiscal_year$Probation.Revocations) 
+
+message <-  paste("This is the average of Direct", 
+                  mean_direct, ". This is the average of patrole", 
+                  mean_parole, ". Finally, this is the average of probation", 
+                  mean_probation) 
+print(message)
+#fiscal_year[ ,c("Average")] <- NA
+#fiscal_year[1, c("Average")] <- "Direct: 21370.67" 
+#fiscal_year[2, c("Average")] <- "Parole: 8424.167" 
+#fiscal_year[3, c("Average")] <- "Probation: 12960.5" 
+ 
+# for each fiscal year, I will get the percentage of the total number of offenders admitted to prison from each admission category 
+fiscal_year$Total <-  rowSums(fiscal_year)
+ 
+fiscal_year %>%
+   mutate_at(vars(Direct.Court.Commitments:Probation.Revocations) , 
+             funs(P = ./fiscal_year$Total * 100))
+
+# Now lets analyze the trend of admissions to prison based on the data presented in the prison admission data in plots 
+viz <- ggplot(data=fiscal_year,aes(x=Total,y=Direct.Court.Commitments)) +
+  geom_smooth(method=lm, se=FALSE, col='red', size=2) + 
+  geom_point(color="navy")  
+viz
+ 
+viz <- ggplot(data=fiscal_year,aes(x=Total,y=Parole.Revocations)) +
+  geom_smooth(method=lm, se=FALSE, col='red', size=2) + 
+  geom_point(color="navy")  
+viz
+
+viz <- ggplot(data=fiscal_year,aes(x=Total,y=Probation.Revocations)) +
+  geom_smooth(method=lm, se=FALSE, col='red', size=2) + 
+  geom_point(color="navy")  
+viz
+
+ 
+p <- ggplot(fiscal_year, aes(Total, Direct.Court.Commitments))
+p <- p + geom_point() + stat_smooth()
+
+fig <- ggplotly(p)
+
+fig
+
+p <- ggplot(fiscal_year, aes(Total, Parole.Revocations))
+p <- p + geom_point() + stat_smooth()
+
+fig <- ggplotly(p)
+
+fig
+
+p <- ggplot(fiscal_year, aes(Total, Direct.Court.Commitments))
+p <- p + geom_point() + stat_smooth()
+
+fig <- ggplotly(p)
+
+fig
+
+ 
+#library(dplyr)
+#library(ggplot2)
+#a <- 3
+#b <- 2
+#Y <- data_frame(x = c(0.2, 0.5, 1, 2, 5, 10),
+#                  y = a + b*log(x)*(1 + rnorm(length(x), sd=0.001)))
+
+#Y %>%
+#  ggplot(aes(x = x, y = y)) +
+#  geom_point(shape = 19, size = 2) +
+#  geom_smooth(method = "nls",
+#              formula = y ~ p1 + p2*log(x),
+#              start = list(p1 = a, p2 = b),
+#              se = FALSE,
+#              control = list(maxiter = 100))
+ 
+ 
+
+```
+ 
+
