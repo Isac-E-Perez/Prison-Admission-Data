@@ -49,3 +49,25 @@ Next, I was interested in the number of days bewteen getting realease from custo
 ![Screen Shot 2021-11-06 at 3 28 06 PM](https://user-images.githubusercontent.com/89553126/140622933-72cf37db-35b0-452f-9232-4c9c75f202fa.png)
 
 ![Screen Shot 2021-11-06 at 3 29 07 PM](https://user-images.githubusercontent.com/89553126/140622956-0d25fc14-9f7b-4b4d-aa41-03d3566c5f13.png)
+
+Afterwards, I wanted to know how much division overhead was provided for each program.
+ 
+![Screen Shot 2021-11-06 at 3 33 53 PM](https://user-images.githubusercontent.com/89553126/140623047-0299693d-483b-4b6b-9909-bdceddca0bae.png)
+
+The overhead for A, B, C and D were 2.857143, 4, 1.333333, and 2.222222 respectfully. This is teh overhead rate, meaning it costs the program this many dollars in overhead costs for every dollar in direct labor expenses.
+
+Afterwards,  I calculated the percentage change in the number of offenders admitted ot prison from fiscal year 2005 to fiscal year 2010.
+ 
+![Screen Shot 2021-11-06 at 3 37 33 PM](https://user-images.githubusercontent.com/89553126/140623131-b7368ebe-8bd3-48ac-a14b-ec6e2bc273b9.png)
+
+![Screen Shot 2021-11-06 at 3 38 24 PM](https://user-images.githubusercontent.com/89553126/140623149-6f61bce3-1d4d-4ca0-8e83-a31270a35758.png)
+
+The produced data demonstrates that there has been a percentage increase in direct court commitments, a decrease percentage change in parole revocations and a insignificant change in probation revocations.
+
+Next, the average number of offenders admitted to prison from fiscal year 2005 to fiscal year 2010.
+
+![Screen Shot 2021-11-06 at 3 43 06 PM](https://user-images.githubusercontent.com/89553126/140623250-b90458e2-5999-4b86-9e67-091e06a011cd.png)
+
+Which was outputted as a message, 
+
+![Screen Shot 2021-11-06 at 3 43 26 PM](https://user-images.githubusercontent.com/89553126/140623260-ec2d0210-a735-4410-b905-f9d70c5a5501.png).
