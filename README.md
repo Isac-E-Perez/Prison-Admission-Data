@@ -5,4 +5,8 @@ For this project, I implemented data analysis using R. I used the libraries tidy
  
 ### Results: 
 
+First, I loaded the datasets onto data frames.
 
+![Screen Shot 2021-11-05 at 8 12 31 PM](https://user-images.githubusercontent.com/89553126/140592904-959494e8-636e-4a70-86f0-f19d1179d1d7.png)
+
+I inspected the datasets with the functions *head* to gain insight in what I wanted to gleam from the data and extract from it.
