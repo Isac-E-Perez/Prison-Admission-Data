@@ -71,3 +71,25 @@ Next, the average number of offenders admitted to prison from fiscal year 2005 t
 Which was outputted as a message, 
 
 ![Screen Shot 2021-11-06 at 3 43 26 PM](https://user-images.githubusercontent.com/89553126/140623260-ec2d0210-a735-4410-b905-f9d70c5a5501.png).
+
+Afterwards, I then got the percentage of the total number of offenders admitted to presion from each of the admission categoary for each fiscal year.  
+
+![Screen Shot 2021-11-06 at 3 45 26 PM](https://user-images.githubusercontent.com/89553126/140623303-1d92a489-1158-4dff-8975-9b5e3b788e1b.png)
+
+Finally, I can analyze the data trends in plots with ggplot2 and best fit plots with plotly.
+
+![Screen Shot 2021-11-06 at 3 48 31 PM](https://user-images.githubusercontent.com/89553126/140623372-97eb8dfa-cf4c-4b41-8768-38bd7c6aa058.png)
+
+![Screen Shot 2021-11-06 at 3 49 04 PM](https://user-images.githubusercontent.com/89553126/140623373-8e118947-21ef-4473-814c-35469cf17735.png)
+
+![Screen Shot 2021-11-06 at 3 49 30 PM](https://user-images.githubusercontent.com/89553126/140623384-c49ea6ca-f3ea-4487-8af9-9aee5fa263ee.png)
+
+![Screen Shot 2021-11-06 at 3 49 43 PM](https://user-images.githubusercontent.com/89553126/140623386-04dd6587-ff4a-4736-906f-7365a5d4e44d.png)
+
+![Screen Shot 2021-11-06 at 3 50 05 PM](https://user-images.githubusercontent.com/89553126/140623407-9e427e45-f616-4270-94a3-f6558982ed0d.png)
+
+![Screen Shot 2021-11-06 at 3 50 19 PM](https://user-images.githubusercontent.com/89553126/140623413-19d2648d-bb0b-4d60-94ca-6148a38d1747.png)
+
+![Screen Shot 2021-11-06 at 3 50 44 PM](https://user-images.githubusercontent.com/89553126/140623437-a0c2c0d8-53c0-44f7-b208-a92d0757d806.png)
+
+![Screen Shot 2021-11-06 at 3 50 59 PM](https://user-images.githubusercontent.com/89553126/140623441-a9e1cc00-a106-4c9d-acc1-d6e0c1f61070.png)
