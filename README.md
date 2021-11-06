@@ -90,6 +90,3 @@ Finally, I can analyze the data trends in plots with ggplot2 and best fit plots 
 
 ![Screen Shot 2021-11-06 at 3 50 19 PM](https://user-images.githubusercontent.com/89553126/140623413-19d2648d-bb0b-4d60-94ca-6148a38d1747.png)
 
-![Screen Shot 2021-11-06 at 3 50 44 PM](https://user-images.githubusercontent.com/89553126/140623437-a0c2c0d8-53c0-44f7-b208-a92d0757d806.png)
-
-![Screen Shot 2021-11-06 at 3 50 59 PM](https://user-images.githubusercontent.com/89553126/140623441-a9e1cc00-a106-4c9d-acc1-d6e0c1f61070.png)
