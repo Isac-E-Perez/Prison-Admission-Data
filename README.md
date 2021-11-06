@@ -44,7 +44,7 @@ I also looked into the standard deviation of the number of offenders in the resi
 
 The standard deviation was 173.5538.
 
-I was interested in the number of days bewteen realease and arrest date in months time units.
+Next, I was interested in the number of days bewteen getting realease from custody and being incarcerated again in number of months units.
  
 ![Screen Shot 2021-11-06 at 3 28 06 PM](https://user-images.githubusercontent.com/89553126/140622933-72cf37db-35b0-452f-9232-4c9c75f202fa.png)
 
