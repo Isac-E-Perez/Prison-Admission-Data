@@ -125,7 +125,7 @@ fig <- ggplotly(p)
 
 fig
 
-p <- ggplot(fiscal_year, aes(Total, Direct.Court.Commitments))
+p <- ggplot(fiscal_year, aes(Total, Probation.Revocations))
 p <- p + geom_point() + stat_smooth()
 
 fig <- ggplotly(p)
