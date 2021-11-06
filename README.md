@@ -1,12 +1,8 @@
 # Prison Admission Data Project
 ### About: 
 
-For this project, I implemented an application using R and Plotly. I used R to build the project.  ---update incoming
-
-### Note:
-
-----update incoming
-
+For this project, I implemented data analysis using R. I used the libraries tidyr, dplyr, plotly and ggplot2 which helped me to build the project.
+ 
 ### Results: 
 
------update incoming
+
